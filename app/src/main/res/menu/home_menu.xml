@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/more_icon"
+        android:icon="@drawable/ic_baseline_more_vert_24"
+        android:title="@string/more"
+        app:showAsAction="always">
+        <menu>
+
+            <item
+                android:id="@+id/rate_us_menu"
+                app:showAsAction="never"
+                android:icon="@drawable/ic_baseline_star_24"
+                android:title="@string/rate_us" />
+
+        </menu>
+    </item>
+
+</menu>

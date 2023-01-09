@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "72907138982",
+    "firebase_url": "https://pubgg-wallpapers-default-rtdb.firebaseio.com",
+    "project_id": "pubgg-wallpapers",
+    "storage_bucket": "pubgg-wallpapers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72907138982:android:579c12b477e54c34785167",
+        "android_client_info": {
+          "package_name": "com.firex.pubg_wallpaper_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72907138982-7sh3upmi1l9cruseojceg5h3en113muc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg34fve69yp6StphINXxR6Zt_4sSynMLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72907138982-7sh3upmi1l9cruseojceg5h3en113muc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">PUBG\'s Wallpapers</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bgmi_s_wallpapers">PUBG\'s Wallpapers</string>
+    <string name="developed_by_dreamx">Developed by FireX</string>
+    <string name="how_would_you_like_to_improve_us">How would you like to improve us?</string>
+    <string name="write_your_feedback_here">Write your feedback here…</string>
+    <string name="cancel">Cancel</string>
+    <string name="your_downloaded_wallpapers_will_appear_here">Your downloads will appear here!</string>
+    <string name="popular">Popular</string>
+    <string name="trending">Trending</string>
+    <string name="categories">Categories</string>
+    <string name="welcome_to_bgmi_s_wallpapers">Welcome to PUBG\'s Wallpapers</string>
+    <string name="get_best_collection_of_wallpapers_of_your_favorite_game_we_have_the_wallpapers_of_all_versions_of_game">Get best collection of wallpapers of your favorite game. We have the wallpapers of all versions of game.</string>
+    <string name="Continue">Continue</string>
+    <string name="regular_updates">Daily Updates</string>
+    <string name="get_regular_updates_of_wallpapers_on_every_season_no_need_to_update_the_app_for_getting_updates_of_wallpapers">Get regular updates of wallpapers on every season. No need to update the app for getting updates of wallpapers.</string>
+    <string name="loading">Loading…</string>
+    <string name="like_this_wallpapers_app_of_your_favorite_game_rate_5_stars">Like This wallpaper app of your favorite game? Rate 5 stars!</string>
+    <string name="more">Explore More</string>
+    <string name="clear_downloads">Delete Wallpapers</string>
+    <string name="share">Share</string>
+    <string name="feedback">Feedback</string>
+    <string name="rate_us">Rate App</string>
+    <string name="iron_source_app_key">17f47c58d</string>
+    <string name="more_apps">More Apps</string>
+    <string name="share_app">Share App</string>
+    <string name="update_available">Update Available</string>
+    <string name="a_new_version_of_this_app_available">A New Version of this app available</string>
+    <string name="update">Update</string>
+    <string name="downloads">Downloads</string>
+    <string name="home">Home</string>
+</resources>
