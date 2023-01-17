@@ -39,7 +39,6 @@ public class RateDialog extends Dialog {
     private boolean opensGooglePlay = true;
     private Context mContext;
 
-
     public void shouldOpenInAppReview() {
         opensGooglePlay = false;
     }

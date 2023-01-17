@@ -11,8 +11,8 @@ android {
         applicationId "com.firex.pubg_wallpaper_2"
         minSdk 21
         targetSdk 32
-        versionCode 15
-        versionName "1.5"
+        versionCode 16
+        versionName "1.6"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
