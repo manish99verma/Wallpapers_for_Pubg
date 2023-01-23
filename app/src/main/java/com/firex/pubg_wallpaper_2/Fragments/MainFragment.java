@@ -2,6 +2,7 @@ package com.firex.pubg_wallpaper_2.Fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,10 +24,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.firex.pubg_wallpaper_2.Adapters.CatAdapter;
 import com.firex.pubg_wallpaper_2.Adapters.CatAdapter2;
 import com.firex.pubg_wallpaper_2.Adapters.PopAdapter;
-import com.firex.pubg_wallpaper_2.Dialogs.RateDialog;
+import com.firex.pubg_wallpaper_2.BuildConfig;
+import com.firex.pubg_wallpaper_2.Dialogs.CustomReviewManager;
 import com.firex.pubg_wallpaper_2.Models.CatModel;
 import com.firex.pubg_wallpaper_2.Models.WallpaperModel;
 import com.firex.pubg_wallpaper_2.R;
+import com.firex.pubg_wallpaper_2.Utilities.PrefManager;
 import com.firex.pubg_wallpaper_2.Utilities.Utils;
 import com.firex.pubg_wallpaper_2.databinding.FragmentHomeBinding;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -101,6 +104,8 @@ public class MainFragment extends Fragment {
         getCategoriesData();
         binding.RVCategories.setNestedScrollingEnabled(false);
         binding.RVMore.setNestedScrollingEnabled(false);
+
+        new CustomReviewManager(context).showIfNotRated();
 
         return binding.getRoot();
     }
@@ -283,8 +288,13 @@ public class MainFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.rate_us_menu) {
-            RateDialog dialog = new RateDialog(context);
-            dialog.show();
+            PrefManager pref = PrefManager.getInstance(context);
+            pref.putBoolean("isAlreadyRated", true);
+
+            CustomReviewManager customReviewManager = new CustomReviewManager(context);
+            customReviewManager.playStore(context);
+        } else if (item.getItemId() == R.id.share_app_menu) {
+            shareApp(context);
         }
 
         return super.onOptionsItemSelected(item);
@@ -493,7 +503,7 @@ public class MainFragment extends Fragment {
     private void updateDatabaseSession() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        Log.i(TAG, "updateDatabaseSession: "+databaseUpdateSession);
+        Log.i(TAG, "updateDatabaseSession: " + databaseUpdateSession);
         try {
             db.collection("Utils").document("OfqFFbYxooZxvVDQsIBU").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                 @Override
@@ -806,4 +816,21 @@ public class MainFragment extends Fragment {
         });
 
     }
+
+    public static void shareApp(Context context) {
+        try {
+            String msg = "Take a look at this Awesome PUBG Wallpapers App ";
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setType("text/plain");
+            shareIntent.putExtra(Intent.EXTRA_SUBJECT, "PUBG Wallpapers");
+            String shareMessage = "\n" + msg + "\n";
+            shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\n";
+            shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+            context.startActivity(Intent.createChooser(shareIntent, "choose one"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
 }

@@ -27,7 +27,7 @@
             android:fontFamily="@font/nunito_bold"
             android:layout_marginTop="15dp"
             android:text="@string/bgmi_s_wallpapers"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="25sp" />
 
     </LinearLayout>
@@ -35,7 +35,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:fontFamily="@font/nunito_semi_bold"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
